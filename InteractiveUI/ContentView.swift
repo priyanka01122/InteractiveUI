@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
+    @State private var name: String = ""
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("What is your name?")
+                .font(.title)
+            TextField("Typle you name here...", text:$name)
+                .multilineTextAlignment(.center)
+                .font(.title)
+                .border(Color.gray, width:1)
+            Button("Submit Name"){
+                
+            }
+                .font(.title2)
+                .buttonStyle(.borderedProminent)
+                .tint(.cyan)
+
         }
         .padding()
     }
